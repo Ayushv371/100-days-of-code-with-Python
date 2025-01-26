@@ -2,6 +2,7 @@ import random
 from tkinter import *
 from tkinter import messagebox
 import pyperclip
+import json
 
 def add():
     website = web_entry.get()
@@ -12,18 +13,28 @@ def add():
     pass_entry.delete(0, END)
     Email_entry.delete(0, END)
 
-    if website != "" and password != "" and email != "":
-        pass
-    else:
-        messagebox.showwarning(title="Warning", message="Fill all fields")
+    file_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
 
-    response = messagebox.askokcancel(title="Confirmation", message=f"Website: {website}\nEmail/Username: {email}\nPassword: {password}\nDo you want to save this?")
-    if response:
-        with open("pass.txt", "a") as file:
-            file.write(f"{website} | {email} | {password}\n")
-            messagebox.showinfo(title="Info", message="Website added successfully")
+    if website == "" or password == "" or email == "":
+        messagebox.showwarning(title="Warning", message="Fill all fields")
     else:
-        messagebox.showinfo(title="Info", message="Operation Cancelled")
+        try:
+            with open("data.json", "r") as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            data = {}
+
+        data.update(file_data)
+
+        with open("data.json", "w") as f:
+            json.dump(data, f, indent=4)
+
+        messagebox.showinfo(title="Info", message="Website added successfully")
 
 
 def generate_password():
