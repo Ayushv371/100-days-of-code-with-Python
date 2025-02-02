@@ -1,6 +1,6 @@
 # 🐍 100 Days of Code: Python
 
-Welcome to my **100 Days of Code with Python** journey! 🚀 This repository contains my daily progress as I follow [Angela Yu's 100 Days of Code - The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code-the-complete-python-pro-bootcamp-for-2023/).
+Welcome to my **100 Days of Code with Python** journey! 🚀 This repository contains my daily progress as I follow [Angela Yu's 100 Days of Code - The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/).
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Ayushv371/100-days-of-code-with-python?color=blue&style=flat-square)  ![GitHub stars](https://img.shields.io/github/stars/Ayushv371/100-days-of-code-with-python?color=yellow&style=flat-square)  ![GitHub forks](https://img.shields.io/github/forks/Ayushv371/100-days-of-code-with-python?color=green&style=flat-square)
 
